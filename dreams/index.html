@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script>
+     const container = document.getElementById('player');
+     const videoInfo = {
+     duration: 547, // total duration of video, expressed in seconds
+     markers: [
+     {id: 'j3kk929c', timecode: 124, label: 'Heatwave in New York City'}, // timecode expressed in seconds
+     {id: 'ck39r8c2', timecode: 267, label: 'Ice Cream Trucks overwhelmed by demand, tourists'},
+     {id: 'q9815779', timecode: 349, label: 'Mayor escapes to Alaska, citing campaign commitments'}
+     ]
+     }
+     window.onload = function() {
+      parseVideoInfo(videoInfo);
+    };
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="player">
+        <video id="video"></video>
+        <div id="player-drawer">
+          <div id="progress-bar-ctr">
+            <div class="progress-bar">
+              <div id="filled-bar" class="progress-bar"></div>
+            </div>
+            <div class="marker-ctr" id="hidden-marker" >
+              <i class="material-icons marker">
+                label
+              </i>
+              <div class="marker-bubble">
+                hello welcome to my welcome bubble
+              </div>
+            </div>
+          </div>
+          <div id="player-controls">
+            <div class="control"></div>
+            <div class="control"></div>
+            <div class="control"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
